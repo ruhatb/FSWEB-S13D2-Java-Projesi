@@ -51,7 +51,7 @@ public class Main {
 //NumberToWords
 
     public static String numberToWords(int sayi) {
-        if (sayi < 0 && sayi > 1000) {
+        if (sayi < 0 ) {
             return "Invalid value.";
         }
      String[] birler = { "", "Bir", "İki", "Üç", "Dört", "Beş", "Altı", "Yedi", "Sekiz", "Dokuz"};
@@ -66,6 +66,11 @@ public class Main {
         if ( sayi >= 100){
             result += birler[sayi/100] + "yüz";
             sayi %= 100;
+        }
+
+        if (sayi >= 1000) {
+            result += birler[sayi / 1000] + "Bin";
+            sayi %= 1000;
         }
 
         if ( sayi >= 10 && sayi < 99){
