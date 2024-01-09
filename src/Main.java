@@ -11,7 +11,7 @@ public class Main {
         System.out.println(isPerfectNumber(45));
 
         System.out.println(numberToWords(45));
-        System.out.println(numberToWords(642));
+        System.out.println(numberToWords(645));
     }
 
 //Palindrome
@@ -51,7 +51,7 @@ public class Main {
 //NumberToWords
 
     public static String numberToWords(int sayi) {
-        if (sayi < 0) {
+        if (sayi < 0 && sayi > 1000) {
             return "Invalid value.";
         }
      String[] birler = { "", "Bir", "İki", "Üç", "Dört", "Beş", "Altı", "Yedi", "Sekiz", "Dokuz"};
